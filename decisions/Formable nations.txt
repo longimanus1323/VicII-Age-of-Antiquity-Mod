@@ -1,0 +1,569 @@
+political_decisions = {
+		arabia_formation = {
+			potential = {
+				primary_culture = arabian
+				ARB = { exists = no }
+			}
+			allow = {
+				ARB = {
+					all_core = {
+						OR = {
+							owned_by = THIS
+							owner = {
+								in_sphere = THIS
+							}
+						}
+					}
+				}
+			}
+		
+			effect = {
+				prestige = 20
+				any_country = {
+					limit = {
+						NOT = {
+							tag = THIS
+						}
+						primary_culture = arabian
+						in_sphere = THIS
+					}
+					annex_to = THIS
+				}
+				change_tag = ARB
+			}
+		}
+		colonize_deserts = {
+			potential = {
+				primary_culture = arabian
+				NOT = { has_global_flag = desert_colonized }
+			}
+			allow = {
+				OR = {
+					is_secondary_power = yes
+					is_greater_power = yes
+				}
+				money = 100000
+				civilized = yes
+			}
+			effect = {
+				prestige = 10
+				treasury = -100000
+				1151 = { 
+					secede_province = THIS
+					add_core = THIS
+				}
+				1153 = { 
+					secede_province = THIS
+					add_core = THIS
+				}
+				1159 = { 
+					secede_province = THIS
+					add_core = THIS
+				}
+				1161 = { 
+					secede_province = THIS
+					add_core = THIS
+				}
+				1157 = { 
+					secede_province = THIS
+					add_core = THIS
+				}
+				1160 = { 
+					secede_province = THIS
+					add_core = THIS
+				}
+				2586 = { 
+					secede_province = THIS
+					add_core = THIS
+				}
+				1156 = { 
+					secede_province = THIS
+					add_core = THIS
+				}
+				1158 = { 
+					secede_province = THIS
+					add_core = THIS
+				}
+				set_global_flag = desert_colonized
+			}
+		}
+		abyssinia_formation = {
+			potential = {
+				OR = {
+					primary_culture = abyssinian
+					primary_culture = nubian
+				}
+				ABB = { exists = no }
+			}
+			allow = {
+				civilized = yes
+				OR = {
+					is_secondary_power = yes
+					is_greater_power = yes
+				}
+				ABB = {
+					all_core = {
+						OR = {
+							owned_by = THIS
+							owner = {
+								in_sphere = THIS
+							}
+						}
+					}
+				}
+				
+			}
+		
+			effect = {
+				prestige = 20
+				any_country = {
+					limit = {
+						NOT = {
+							tag = THIS
+						}
+						primary_culture = nubian
+						primary_culture = abyssinian
+						in_sphere = THIS
+					}
+					annex_to = THIS
+				}
+				change_tag = ABB
+				add_accepted_culture = nubian
+				primary_culture = abyssinian
+			}
+		}
+		germania_formation = {
+			potential = {
+				primary_culture = germanic
+				primary_culture = friscian
+				GER = { exists = no }
+			}
+			allow = {
+				555 = { 
+					OR = {
+						owned_by = THIS
+						owner = {in_sphere = THIS}
+					}
+				}
+				545 = { 
+					OR = {
+						owned_by = THIS
+						owner = {in_sphere = THIS}
+					}
+				}
+				699 = { 
+					OR = {
+						owned_by = THIS
+						owner = {in_sphere = THIS}
+					}
+				}
+				625 = { 
+					OR = {
+						owned_by = THIS
+						owner = {in_sphere = THIS}
+					}
+				}
+				386 = { 
+					OR = {
+						owned_by = THIS
+						owner = {in_sphere = THIS}
+					}
+				}
+				598 = { 
+					OR = {
+						owned_by = THIS
+						owner = {in_sphere = THIS}
+					}
+				}
+				589 = { 
+					OR = {
+						owned_by = THIS
+						owner = {in_sphere = THIS}
+					}
+				}
+				595 = { 
+					OR = {
+						owned_by = THIS
+						owner = {in_sphere = THIS}
+					}
+				}
+			}
+			effect = {
+				any_country = {
+					limit = {
+						NOT = {
+							tag = THIS
+						}
+						primary_culture = germanic
+						primary_culture = friscian
+						in_sphere = THIS
+					}
+					annex_to = THIS
+				}
+				change_tag = GER
+				add_accepted_culture = friscian
+			}
+		}
+		belgica_formation = {
+			potential = {
+				primary_culture = belgae
+				BEL = { exists = no }
+			}
+			allow = {
+				civilized = yes
+				OR = {
+					is_secondary_power = yes
+					is_greater_power = yes
+				}
+				BEL = {
+					all_core = {
+						OR = {
+							owned_by = THIS
+							owner = {
+								in_sphere = THIS
+							}
+						}
+					}
+				}
+				
+			}
+		
+			effect = {
+				prestige = 20
+				any_country = {
+					limit = {
+						NOT = {
+							tag = THIS
+						}
+						primary_culture = belgae
+						in_sphere = THIS
+					}
+					annex_to = THIS
+				}
+				change_tag = BEL
+			}
+		}
+		gaul_formation = {
+			potential = {
+				primary_culture = celtic
+				GAU = { exists = no }
+			}
+			allow = {
+				civilized = yes
+				OR = {
+					is_secondary_power = yes
+					is_greater_power = yes
+				}
+				GAU = {
+					all_core = {
+						OR = {
+							owned_by = THIS
+							owner = {
+								in_sphere = THIS
+							}
+						}
+					}
+				}
+				
+			}
+		
+			effect = {
+				prestige = 20
+				any_country = {
+					limit = {
+						NOT = {
+							tag = THIS
+						} 
+						primary_culture = gallic
+						in_sphere = THIS
+					}
+					annex_to = THIS
+				}
+				change_tag = GAU
+			}
+		}
+		brittana_formation = {
+			potential = {
+				OR = {
+					primary_culture = brittonic
+					primary_culture = pictish
+				}
+				BRT = { exists = no }
+			}
+			allow = {
+				civilized = yes
+				OR = {
+					is_secondary_power = yes
+					is_greater_power = yes
+				}
+				BRT = {
+					all_core = {
+						OR = {
+							owned_by = THIS
+							owner = {
+								in_sphere = THIS
+							}
+						}
+					}
+				}
+			}
+		
+			effect = {
+				prestige = 20
+				any_country = {
+					limit = {
+						NOT = {
+							tag = THIS
+						}
+						primary_culture = brittonic
+						in_sphere = THIS
+					}
+					annex_to = THIS
+				}
+				change_tag = BRT
+			}
+		}
+		cisalpina_formation = {
+			potential = {
+				OR = {
+					tag = INS
+					tag = LIG
+					tag = VNN
+				}
+				CIS = { exists = no }
+			}
+			allow = {
+				civilized = yes
+				OR = {
+					is_secondary_power = yes
+					is_greater_power = yes
+				}
+				CIS = {
+					all_core = {
+						OR = {
+							owned_by = THIS
+							owner = {
+								in_sphere = THIS
+							}
+						}
+					}
+				}
+			}
+		
+			effect = {
+				prestige = 20
+				INS = {
+					limit = { ai = yes}
+					in_sphere = THIS
+					annex_to = THIS
+				}
+				VNN = {
+					limit = { ai = yes}
+					in_sphere = THIS
+					annex_to = THIS
+				}
+				LIG = {
+					limit = { ai = yes}
+					in_sphere = THIS
+					annex_to = THIS
+				}
+				change_tag = CIS
+			}
+		}
+		iberia_formation = {
+			potential = {
+				is_culture_group = iberia
+				IBR = { exists = no }
+			}
+			allow = {
+				civilized = yes
+				OR = {
+					is_secondary_power = yes
+					is_greater_power = yes
+				}
+				IBR = {
+					all_core = {
+						OR = {
+							owned_by = THIS
+							owner = {
+								in_sphere = THIS
+							}
+						}
+					}
+				}
+			}
+		
+			effect = {
+				prestige = 20
+				any_country = {
+					limit = {
+						NOT = {
+							tag = THIS
+						}
+						is_culture_group = iberia
+						in_sphere = THIS
+					}
+					annex_to = THIS
+				}
+				change_tag = IBR
+			}
+		}
+		thrace_formation = {
+			potential = {
+				primary_culture = thracian
+				THR = { exists = no }
+			}
+			allow = {
+				civilized = yes
+				OR = {
+					is_secondary_power = yes
+					is_greater_power = yes
+				}
+				THR = {
+					all_core = {
+						OR = {
+							owned_by = THIS
+							owner = {
+								in_sphere = THIS
+							}
+						}
+					}
+				}
+			}
+		
+			effect = {
+				prestige = 20
+				any_country = {
+					limit = {
+						NOT = {
+							tag = THIS
+						}
+						primary_culture = thracian
+						in_sphere = THIS
+					}
+					annex_to = THIS
+				}
+				change_tag = THR
+			}
+		}
+		moesia_formation = {
+			potential = {
+				OR = {
+					primary_culture = thracian
+					primary_culture = illyrian
+				}
+				MOE = { exists = no }
+			}
+			allow = {
+				civilized = yes
+				OR = {
+					is_secondary_power = yes
+					is_greater_power = yes
+				}
+				MOE = {
+					all_core = {
+						OR = {
+							owned_by = THIS
+							owner = {
+								in_sphere = THIS
+							}
+						}
+					}
+				}
+			}
+		
+			effect = {
+				prestige = 20
+				any_country = {
+					limit = {
+						NOT = {
+							tag = THIS
+						}
+						primary_culture = thracian
+						primary_culture = illyrian
+						in_sphere = THIS
+					}
+					annex_to = THIS
+				}
+				change_tag = MOE
+			}
+		}
+		dacia_formation = {
+			potential = {
+				primary_culture = dacian 
+				DAC = { exists = no }
+			}
+			allow = {
+				civilized = yes
+				OR = {
+					is_secondary_power = yes
+					is_greater_power = yes
+				}
+				DAC = {
+					all_core = {
+						OR = {
+							owned_by = THIS
+							owner = {
+								in_sphere = THIS
+							}
+						}
+					}
+				}
+			}
+		
+			effect = {
+				prestige = 20
+				any_country = {
+					limit = {
+						NOT = {
+							tag = THIS
+						}
+						primary_culture = dacian
+						in_sphere = THIS
+					}
+					annex_to = THIS
+				}
+				change_tag = DAC
+			}
+		}
+		illyria_formation = {
+			potential = {
+				primary_culture = illyrian 
+				ILL = { exists = no }
+			}
+			allow = {
+				civilized = yes
+				OR = {
+					is_secondary_power = yes
+					is_greater_power = yes
+				}
+				ILL = {
+					all_core = {
+						OR = {
+							owned_by = THIS
+							owner = {
+								in_sphere = THIS
+							}
+						}
+					}
+				}
+			}
+		
+			effect = {
+				prestige = 20
+				any_country = {
+					limit = {
+						NOT = {
+							tag = THIS
+						}
+						primary_culture = illyrian
+						in_sphere = THIS
+					}
+					annex_to = THIS
+				}
+				change_tag = ILL
+			}
+		}
+}
+
+

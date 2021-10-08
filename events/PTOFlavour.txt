@@ -1,0 +1,72 @@
+country_event = {
+
+	id = 001
+	title = "EVTNAME001" #Pharos Lighthouse finished
+	desc = "EVTDESC001"
+	picture = "eiffel_tower_finished"
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = PTO
+		owns = 1751
+		year = 475
+	}
+		
+	mean_time_to_happen = { days = 5 }
+	
+	option = {
+		name = "EVT001OPTA"
+		set_country_flag = great_lighthouse_built
+		1751 = {
+				set_province_flag = great_lighthouse_built
+				add_province_modifier = {
+					name = pharos_lighthouse
+					duration = -1
+				}
+			}
+			prestige = 5
+		}
+	}
+
+country_event = {
+
+	id = 002
+	title = "EVTNAME002" #Build the Alexandria Museum
+	desc = "EVTDESC002"
+	picture = "eiffel_tower_finished"
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = PTO
+		owns = 1751
+		year = 479
+		treasury = 20000
+	}
+		
+	mean_time_to_happen = { days = 5 }
+
+	option = {
+		name = "EVTOPT002A"
+		set_country_flag = great_lighthouse_built
+		1751 = {
+				set_province_flag = museion_built
+				add_province_modifier = {
+					name = museion
+					duration = -1
+				}
+			}
+			prestige = 20
+			research_points = 2500
+			treasury = -20000
+		}
+	}
+	option = {
+		name = "EVTOPT002B"
+		set_country_flag = museion_rejected
+			prestige = -20
+			treasury = 20000
+			literacy = -0.10
+		}
+	}

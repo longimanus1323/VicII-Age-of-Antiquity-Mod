@@ -1,0 +1,48 @@
+political_decisions = {
+	romanizations = {
+		potential = {
+			tag = RME
+			NOT = { has_country_flag = romanization }
+		}
+		allow = {
+			OR = {
+				LIG = {
+					any_core = {
+						controlled_by = THIS
+					}
+				}
+				MGR = {
+					any_core = {
+						controlled_by = THIS
+					}
+				}
+			}
+		}
+		effect = {
+			set_country_flag = romanization
+		}
+	}
+	mrga = { 
+		potential = {
+			tag = RME
+			NOT = { has_country_flag = mgr_annexed }
+		}
+		allow = {
+			year = 482
+			MGR = {
+				vassal_of = RME
+				in_sphere = RME
+			}
+			war = no
+		}
+		effect = {
+			MGR = {
+				any_core = {
+					add_core = RME
+				}
+			
+			}
+			set_country_flag = mgr_annexed
+		}
+	}
+}

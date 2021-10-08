@@ -1,0 +1,13 @@
+political_decisions = {
+	fountain_of_youth = {
+	    alert = no
+	    potential = {ai = no}
+    	allow = { }
+    	effect = {
+    	    any_pop = {
+        	    reduce_pop = 2.0	
+        	}
+    	}
+  		ai_will_do = { factor = 0 }
+	} 
+} 

@@ -1,0 +1,68 @@
+country_event = {
+
+	id = 004
+	title = "EVTNAME004"
+	desc = "EVTDESC004"
+	picture = "tdf_dos"
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MAU
+		exists = yes
+		year = 482
+		war = no
+	}
+		
+	mean_time_to_happen = { days = 10 }
+
+	immediate = {
+		ENG_1297 = { add_core = MAU }
+		ENG_1291 = { add_core = MAU }
+		1296 = { add_core = MAU }
+		1286 = { add_core = MAU }
+		1315 = { add_core = MAU }
+	}
+	
+	option = {
+		name = "EVTOPT004A"
+		prestige = 10
+		
+		casus_belli ={
+			target = KAN
+			type = conquest
+			months = 60
+		}
+		casus_belli ={
+			target = KA1
+			type = conquest
+			months = 60
+		}
+		war = {
+			target = KA1
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = no
+		}
+		war = {
+			target = KAN
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = no
+		}
+	}
+	option = {
+		name = "EVTOPT004B"
+		prestige = -10
+		add_casus_belli ={
+			target = KAN
+			type = humiliate
+			months = 24
+		}
+		add_casus_belli ={
+			target = KA1
+			type = humiliate
+			months = 24
+		}
+	}
+}

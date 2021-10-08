@@ -1,0 +1,232 @@
+political_decisions = {
+			axum_colonization_1 = {
+				potential = {
+					tag = AXU
+					NOT = { has_country_flag = axu_colonization_1 }
+				}
+				allow = {
+					
+					prestige = 5
+					1854 = {
+						country_units_in_province = THIS
+					}
+					1852 = {
+						country_units_in_province = THIS
+					}
+					1856 = {
+						country_units_in_province = THIS
+					}
+				
+				}
+				effect = {
+					1854 = {
+						secede_province = THIS
+						add_core = THIS
+						change_controller = THIS
+						trade_goods = grain 
+					}
+					1852 = {
+						secede_province = THIS
+						add_core = THIS
+						change_controller = THIS
+						trade_goods = cattle
+					}
+					1856 = {
+						secede_province = THIS
+						add_core = THIS
+						change_controller = THIS
+						trade_goods = cattle
+					}
+					prestige = 5
+					set_country_flag = axu_colonization_1
+				
+				}
+			}
+			axum_colonization_2 = {
+				potential = {
+					tag = AXU
+					AND = {
+						NOT = { has_country_flag = axu_colonization_2 }
+						has_country_flag = axu_colonization_1
+					}
+				}
+				allow = {
+					money = 50000
+					prestige = 5
+					1849 = {
+						country_units_in_province = THIS
+					}
+					1851 = {
+						country_units_in_province = THIS
+					}
+					1848 = {
+						country_units_in_province = THIS
+					}
+					1850 = {
+						country_units_in_province = THIS
+					}
+					1875 = {
+						country_units_in_province = THIS
+					}
+				
+				}
+				effect = {
+					treasure = -50000
+					1854 = {
+						secede_province = THIS
+						add_core = THIS
+						change_controller = THIS
+						trade_goods = grain
+					}
+					1852 = {
+						secede_province = THIS
+						add_core = THIS
+						change_controller = THIS
+						trade_goods = cattle
+					}
+					1856 = {
+						secede_province = THIS
+						add_core = THIS
+						change_controller = THIS
+						trade_goods = cattle
+					}
+					1849 = {
+						secede_province = THIS
+						add_core = THIS
+						change_controller = THIS
+						trade_goods = fruit
+					}
+					1851 = {
+						secede_province = THIS
+						add_core = THIS
+						change_controller = THIS
+						trade_goods = fruit
+					}
+					1848 = {
+						secede_province = THIS
+						add_core = THIS
+						change_controller = THIS
+						trade_goods = fruit
+					}
+					1850 = {
+						secede_province = THIS
+						add_core = THIS
+						change_controller = THIS
+						trade_goods = fruit
+					}
+					1875 = {
+						secede_province = THIS
+						add_core = THIS
+						change_controller = THIS
+						trade_goods = cattle
+					}
+					prestige = 5
+					set_country_flag = axu_colonization_2
+				
+				}
+			}
+			axum_colonization_3 = {
+				potential = {
+					tag = AXU
+					AND = {
+						NOT = { has_country_flag = axu_colonization_3 }
+						has_country_flag = axu_colonization_2 
+						has_country_flag = axu_colonization_1 
+					}
+				}
+				allow = {
+					
+					prestige = 5
+					1862 = {
+						country_units_in_province = THIS
+					}
+					1864 = {
+						country_units_in_province = THIS
+					}
+					1860 = {
+						country_units_in_province = THIS
+					}
+				
+				}
+				effect = {
+					1862 = {
+						secede_province = THIS
+						add_core = THIS
+						change_controller = THIS
+						trade_goods = grain
+					}
+					1864 = {
+						secede_province = THIS
+						add_core = THIS
+						change_controller = THIS
+						trade_goods = coffee
+					}
+					1860 = {
+						secede_province = THIS
+						add_core = THIS
+						change_controller = THIS
+						trade_goods = cattle
+					}
+					prestige = 5
+					set_country_flag = axu_colonization_3
+				
+				}
+			}
+			axum_colonization_4 = {
+				potential = {
+					tag = AXU
+					AND = {
+						NOT = { has_country_flag = axu_colonization_4 }
+						has_country_flag = axu_colonization_3 
+						has_country_flag = axu_colonization_2 
+						has_country_flag = axu_colonization_1 
+					}
+				}
+				allow = {
+					
+					prestige = 5
+					1861 = {
+						country_units_in_province = THIS
+					}
+					1866 = {
+						country_units_in_province = THIS
+					}
+					1867 = {
+						country_units_in_province = THIS
+					}
+					1865 = {
+						country_units_in_province = THIS
+					}
+				
+				}
+				effect = {
+					1861 = {
+						secede_province = THIS
+						add_core = THIS
+						change_controller = THIS
+						trade_goods = grain
+					}
+					1866 = {
+						secede_province = THIS
+						add_core = THIS
+						change_controller = THIS
+						trade_goods = cattle
+					}
+					1867 = {
+						secede_province = THIS
+						add_core = THIS
+						change_controller = THIS
+						trade_goods = grain
+					}
+					1865 = {
+						secede_province = THIS
+						add_core = THIS
+						change_controller = THIS
+						trade_goods = coffee
+					}
+					prestige = 5
+					set_country_flag = axu_colonization_4
+				}
+			}
+
+}

@@ -1,0 +1,39 @@
+country_event = {
+
+	id = 10356
+	trigger = {
+		war = no 
+		civilized = yes
+		has_country_flag = slave
+	}
+ 
+	mean_time_to_happen =  {
+		months = 0.1
+	}
+
+	title = "EVTNAME10356"
+	desc = "EVTDESC10356"
+	picture = ""
+
+	option = {
+		name = "EVTOPTA10356"
+		any_owned = {
+			limit = { 
+				AND = {
+					NOT = { 
+						has_province_modifier = recently_enslaved
+						is_core = THIS 
+					}
+				}
+			}
+			add_province_modifier = {
+					name = recently_enslaved
+					duration = -1
+			}
+			poor_strata = {
+				pop_type = slaves
+			}
+		}
+		clr_country_flag = slave
+	}
+}

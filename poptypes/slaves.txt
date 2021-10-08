@@ -1,0 +1,75 @@
+sprite = 10
+strata = poor
+allowed_to_vote = no
+is_slave = yes
+color = { 17 17 17 }
+unemployment = yes
+
+rebel =
+{
+	cavalry = 0.0
+	artillery = 0.0
+	cuirassier = 0.0
+	dragoon = 0.0
+	guard = 0.0
+	hussar = 0.0
+	infantry = 0.0
+	irregular = 0.0
+}
+
+
+everyday_needs = {
+	coal = 1
+}
+
+luxury_needs = {
+	opium = 1
+}
+
+ideologies = {
+	liberal = {
+		factor = 1
+	}
+	conservative = {
+		factor = 5
+	}
+}
+issues = {
+} 
+migration_target =
+{
+	factor = 0.5
+	
+	modifier = {
+		factor = 1.0
+		total_pops = 150000
+	}	
+	modifier = {
+		factor = 1.2
+		total_pops = 250000
+	}
+	modifier = {
+		factor = 1.5
+		total_pops = 500000
+	}
+	modifier = {
+		factor = 2.0
+		total_pops = 750000
+	}	
+	modifier = {
+		factor = 2.5
+		is_core = THIS 
+	}
+	modifier = {
+		factor = 2
+		is_state_capital = yes
+	}		
+	modifier = {
+		factor = 1.5
+		is_capital = yes
+	}
+}
+country_migration_target =
+{
+	factor = 1
+}

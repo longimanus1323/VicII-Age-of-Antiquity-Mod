@@ -1,0 +1,24 @@
+country_event = {
+
+	id = 9999
+	trigger = {
+		ai = no
+		NOT = { has_global_flag = bactrian_bug }
+	}
+ 
+	mean_time_to_happen =  {
+		months = 0.1
+	}
+
+	title = "EVTNAME9999"
+	desc = "EVTDESC9999"
+	picture = "bctbug"
+
+	option = {
+		name = "EVTOPTA9999"
+		SEL = {
+			create_vassal = BCT
+		}
+		set_global_flag = bactrian_bug 
+	}
+}
